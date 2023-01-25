@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">QualityCheck</string>
+
+    <string-array name="preparations">
+        <item>Arroz primavera</item>
+        <item>Pollo averjado</item>
+        <item>Puré de papas</item>
+        <item>Carne mechada</item>
+        <item>Pollo asado</item>
+    </string-array>
+</resources>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".PreparationActivity">
+<ImageView
+    android:id="@+id/imageView3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="60dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/logomobile" />
+
+    <LinearLayout
+        android:id="@+id/idpreparationlayout"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/bgpreparation"
+        android:orientation="vertical"
+        android:paddingLeft="12sp"
+        android:paddingTop="12sp"
+        android:paddingRight="12sp"
+        android:paddingBottom="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+        <TextView
+            android:id="@+id/idtextviewpreparation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12sp"
+            android:text="Seleccione preparación"
+            android:textAlignment="center"
+            android:textColor="@color/colorBackground"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/idtextinputpreparation"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Preparación"
+            app:hintAnimationEnabled="false">
+
+
+            <AutoCompleteTextView
+                android:id="@+id/idautocompletepreparation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/corner_radius" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/idclientlayout"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bgpreparation"
+        android:orientation="vertical"
+        android:paddingLeft="12sp"
+        android:paddingTop="12sp"
+        android:paddingRight="12sp"
+        android:paddingBottom="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idpreparationlayout">
+
+        <TextView
+            android:id="@+id/idtextviewclient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12sp"
+            android:text="Seleccione cliente"
+            android:textAlignment="center"
+            android:textColor="@color/colorBackground"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/idinputtextclient"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Cliente"
+            app:hintAnimationEnabled="false">
+
+            <AutoCompleteTextView
+                android:id="@+id/idautocompleteclient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/corner_radius" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bgpreparation"
+        android:orientation="vertical"
+        android:paddingLeft="12sp"
+        android:paddingTop="12sp"
+        android:paddingRight="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idclientlayout">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12sp"
+            android:text="¿Dónde estás midiendo?"
+            android:textAlignment="center"
+            android:textColor="@color/colorBackground"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtPlace"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner_radius"
+            android:ems="10"
+            android:hint="Ingresa el lugar"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingLeft="16sp"
+            android:paddingTop="10sp"
+            android:paddingBottom="10sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnPreparationCancel"
+        android:layout_width="155dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:text="Cancelar"
+        android:textColor="@color/colorPrimary"
+        app:backgroundTint="@color/colorBgButtonUnfocus"
+        app:layout_constraintEnd_toStartOf="@+id/btnCalSuccess"
+        app:layout_constraintHorizontal_bias="0.284"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/btnPreparation"
+        android:layout_width="144dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="28dp"
+        android:text="Medir"
+        android:textColor="@color/colorPrimary"
+        app:backgroundTint="@color/colorBgButtonFocus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>
